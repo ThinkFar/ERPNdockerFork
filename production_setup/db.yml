@@ -18,7 +18,7 @@ services:
     ports:
       - "3307:3306"
     networks:
-      - frappe_db
+      - erpnext_production-frappe_db
 
 volumes:
   mariadb-data-volumes:
@@ -30,5 +30,5 @@ configs:
     file: ./conf/mariadb-conf/init.sql
 
 networks:
-  frappe_db:
+  erpnext_production-frappe_db:
     external: true

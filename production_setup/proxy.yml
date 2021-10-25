@@ -11,7 +11,7 @@ services:
       - traefik-certificates-storage-volumes:/etc/traefik/acme
       - traefik-logs-volumes:/etc/traefik/logs
     networks:
-      - traefik_proxy
+      - erpnext_production-traefik_proxy
     configs:
       - source: traefik-conf
         target: /etc/traefik/traefik.toml
@@ -25,5 +25,5 @@ configs:
     file: ./conf/traefik-conf/traefik.toml
 
 networks:
-  traefik_proxy:
+  erpnext_production-traefik_proxy:
     external: true

@@ -7,7 +7,7 @@ services:
       - prometheus-data-volumes:/prometheus
     networks:
       - monitor
-      - traefik_proxy
+      - erpnext_production-traefik_proxy
     configs:
       - source: prometheus-conf
         target: /etc/prometheus/prometheus.yml
@@ -33,7 +33,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     networks:
-      - traefik_proxy
+      - erpnext_production-traefik_proxy
       - monitor
     volumes:
       - grafana-data-volumes:/var/lib/grafana
@@ -44,7 +44,7 @@ services:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:graf.example1.com"
       - "traefik.port=3000"
-      - "traefik.docker.network=traefik_proxy"
+      - "traefik.docker.network=erpnext_production-traefik_proxy"
 
 volumes:
   prometheus-data-volumes:
@@ -57,7 +57,7 @@ configs:
     file: ./conf/grafana-conf/datasource.yml
 
 networks:
-  traefik_proxy:
+  erpnext_production-traefik_proxy:
     external: true
   monitor:
     driver: overlay
