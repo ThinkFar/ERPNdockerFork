@@ -3,8 +3,8 @@ FROM debian:10.2
 ###############################################
 # ARG
 ###############################################
-ARG adminPass=${{ secrets.ERPNEXT_SETUP_PW }}
-ARG mysqlPass=${{ secrets.ERPNEXT_MYSQL_PW }}
+ARG adminPass=12345678
+ARG mysqlPass=12345678
 ARG pythonVersion=python3
 ARG appBranch=version-13
 
