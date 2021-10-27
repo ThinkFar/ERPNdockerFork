@@ -35,4 +35,4 @@ syslog
 [mysqldump]
 quick
 quote-names
-max_allowed_packet	= 32M
+max_allowed_packet = 32M
