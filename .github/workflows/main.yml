@@ -11,3 +11,4 @@ jobs:
         name: thinkn/erpnext-drpst
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+        buildargs: mysqlPass=asdf
