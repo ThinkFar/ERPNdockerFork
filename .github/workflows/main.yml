@@ -8,7 +8,8 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: thinkn/erpnext-drpst
+        name: thinkn/private
+        tags: erpnext-drpsht
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        buildargs: mysqlPass=asdf
+        buildargs: mysqlPass=${{ secrets.ERPNEXT_MYSQL_PW }}, adminPass=${{ secrets.ERPNEXT_SETUP_PW }}
