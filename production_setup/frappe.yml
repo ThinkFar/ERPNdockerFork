@@ -16,7 +16,7 @@ services:
     labels:
       - "traefik.enable=true"
       # - "traefik.frontend.rule=Host:example1.com, example2.com" [Separate with comma]
-      - "traefik.frontend.rule=Host:erp.distera.com"
+      - "traefik.frontend.rule=Host:erp.dropshit.co"
       - "traefik.port=80"
       - "traefik.docker.network=erpnext_production-traefik_proxy"
     networks:

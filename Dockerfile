@@ -31,7 +31,7 @@ ENV benchPath=bench-repo \
     benchBranch=master \
     frappeRepo="https://github.com/frappe/frappe" \
     erpnextRepo="https://github.com/frappe/erpnext" \
-    siteName=erp.distera.com
+    siteName=erp.dropshit.co
 
 ###############################################
 # INSTALL PREREQUISITE
