@@ -9,8 +9,8 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: thinkn/private
-        tags: erpnext-distera.com
-        default_branch: distera.com
+        tags: erpnext-drpsht
+        default_branch: drpsht
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         buildargs: mysqlPass=${{ secrets.ERPNEXT_MYSQL_PW }}, adminPass=${{ secrets.ERPNEXT_SETUP_PW }}
